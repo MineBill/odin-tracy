@@ -4,7 +4,7 @@ import "core:c"
 
 when ODIN_OS == .Darwin  do foreign import tracy "tracy.dylib"
 when ODIN_OS == .Windows do foreign import tracy "tracy.lib"
-when ODIN_OS == .Linux   do foreign import tracy "tracy.so"
+when ODIN_OS == .Linux   do foreign import tracy "libtracy.a"
 
 TracyPlotFormatEnum :: enum i32
 {
